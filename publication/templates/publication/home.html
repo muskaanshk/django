@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Faculty Name</title>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+	<!-- Image and text -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand col-md-10" href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/en/e/e8/Vesitlog-transparent.png" width="50" height="50" class="d-inline-block align-top" alt="" loading="lazy">
+    VESIT FACULTY PUBLICATIONS
+  </a>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Faculty names
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+<!-- 	{% for faculty in faculty %}
+
+    <a class="dropdown-item" href="#">{faculty.name}</a>
+	{% endfor %} -->
+
+  </div>
+</div>
+</nav>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">
+<h1>Faculty Name</h1></li>
+  </ol>
+</nav>
+
+	<p><h2>Faculty Info:
+	</br>
+
+		{{faculty.info}}
+	</h2></p>
+		<p>
+		Dr. Anjali Yeole is currently serving as an Assistant Professor, in Vivekanand Education Society’s
+Institute of Technology(VESIT), Mumbai University, Mumbai, India. He has obtained a Ph.D in
+Technology from University of Mumbai, Mumbai in 2019.She has published various research papers
+in international journals and international conferences including IEEE, ACM , Springer and free journal.
+She has reviewed many papers for conferences and journals.She has reviewed two books “ Computer
+Organization and Architecture” and “Internet of Things'' by Shriram K. Vasudevan, Abhishek S.
+Nagarajan, and R. M. D. Sundaram”. She authored two books “Information Management” and
+“Internet of Everything”.She is a certified IoT trainer. She has completed Microsoft Certification for
+“Cryptography and System Security” and NPTEL certification for “System Security”. Her areas of
+interest are IoT, Parallel Computing, Distributed Computing, Virtualization and Cloud Computing,
+	</p>
+	
+	{% for publication in publication %}
+<div class="pdf">
+
+	<h5>{{publication.title}} published in the year{{publication.year}}
+	
+	<a class="float-right col-md-2" href="{{publication.file.url}}" target="_blank"> <img src="https://img.favpng.com/11/0/12/adobe-acrobat-computer-icons-portable-network-graphics-pdf-scalable-vector-graphics-png-favpng-tXeC1R2P0GrsKDHUq9gN57w6P.jpg" width="50" height="50" class="d-inline-block align-top" alt=""></a>
+</h5></br>
+	<hr>
+
+</div>
+	{% endfor %}
+
+
+ <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+<style>
+	body {
+  background: #fafafa;
+  color: #333333;
+  margin-top: 2rem;
+}
+	p,h1, h2, h3, h4, h5, h6 {
+		margin-left: 2rem;
+  color: #444444;
+}
+.pdf:hover{
+	background-color: lightgray;
+	font-weight: bolder;
+	color: white;
+}	
+</style>
+</html>
